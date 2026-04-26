@@ -23,7 +23,8 @@ This repository contains all the concepts, code, and practice related to:
 
 ### 🔹 Core Java
 - OOP Concepts (Encapsulation, Inheritance, Polymorphism, Abstraction)
-- Data Types & Variables
+- Data Types
+- Variables
 - Control Statements
 - Arrays & Strings
 - Exception Handling
