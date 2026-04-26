@@ -1,4 +1,4 @@
-# ☕ JAVA_Full_Stack
+# ☕ JAVA Full_Stack
 
 🚀 A complete journey of mastering **Java Full Stack Development** — covering backend, frontend, and essential tools required to become a job-ready developer.
 
