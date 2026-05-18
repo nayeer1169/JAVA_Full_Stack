@@ -1,4 +1,5 @@
 //1d array
+//starting of an array 
 import java.util.Scanner;
 public class array1 {
 	static void createArray(int n){
