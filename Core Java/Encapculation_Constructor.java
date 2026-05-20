@@ -1,3 +1,4 @@
+//Encapsulation revision
 class Customer{
 	private int cId;
 	private String cName;
