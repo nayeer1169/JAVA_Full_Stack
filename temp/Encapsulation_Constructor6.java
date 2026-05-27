@@ -83,7 +83,7 @@ public class Encapsulation_Constructor6 {
 			System.out.println(ar[i].getCrimeType());
 		}
 
-		sc.close();
+	
 	}
 
 }
