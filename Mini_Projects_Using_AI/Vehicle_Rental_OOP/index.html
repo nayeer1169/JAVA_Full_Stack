@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Rentals | 3D Vehicle Agency Showcase</title>
+    
+    <!-- Modern Typography from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Three.js & OrbitControls via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo">
+            <span class="logo-icon">🚗</span>
+            <span class="logo-text">OOP <span class="accent-text">Rentals</span></span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero">Hero Object</a>
+            <a href="#pillars">OOP Pillars</a>
+            <a href="#emulator">Fleet Simulator</a>
+            <a href="#code">Java Code</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <!-- Left: Info & Branding -->
+                <div class="hero-content">
+                    <span class="badge">Interactive 3D Demo</span>
+                    <h1>Next-Gen <br>Vehicle Rental Showcase</h1>
+                    <p class="hero-tagline">
+                        Experience Java OOP principles in action. Explore a modular vehicle fleet managed via custom algorithms, abstraction layers, and dynamic polymorphs.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#emulator" class="btn btn-primary">Launch Fleet Simulator</a>
+                        <a href="#pillars" class="btn btn-secondary">Learn OOP Pillars</a>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive 3D Canvas -->
+                <div class="hero-3d">
+                    <div class="canvas-card">
+                        <div id="canvas-container">
+                            <!-- Three.js Canvas will load here -->
+                            <div class="canvas-loader" id="loader">
+                                <div class="spinner"></div>
+                                <p>Initializing 3D Engine...</p>
+                            </div>
+                        </div>
+                        <div class="customize-panel">
+                            <div class="panel-row">
+                                <span class="panel-label">Paint Finish:</span>
+                                <div class="color-options">
+                                    <button class="color-btn active" data-color="#d32f2f" style="background-color: #d32f2f;" title="Metallic Crimson"></button>
+                                    <button class="color-btn" data-color="#0066cc" style="background-color: #0066cc;" title="Electric Blue"></button>
+                                    <button class="color-btn" data-color="#ffcc00" style="background-color: #ffcc00;" title="Cyberpunk Yellow"></button>
+                                    <button class="color-btn" data-color="#2a2a2a" style="background-color: #2a2a2a;" title="Stealth Carbon"></button>
+                                </div>
+                            </div>
+                            <div class="panel-row">
+                                <span class="panel-label">Headlights:</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="headlight-switch" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OOP Pillars Section -->
+        <section id="pillars" class="pillars-section">
+            <div class="section-header">
+                <h2>The 4 Pillars of OOP in Java</h2>
+                <p>See how the foundation of Object-Oriented Programming is built directly into our Vehicle Rental codebase.</p>
+            </div>
+            
+            <div class="pillars-grid">
+                <!-- Abstraction -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🧩</div>
+                    <h3>Abstraction</h3>
+                    <p class="pillar-desc">
+                        Hiding complex details and showing only essentials. We declare `Vehicle` as an `abstract class` with an abstract method:
+                    </p>
+                    <code>public abstract double calculateRentalCost(int days);</code>
+                    <p class="pillar-impact">
+                        Each subclass must implement its own pricing rules, hiding the complexity of calculations from the agency manager.
+                    </p>
+                </div>
+
+                <!-- Encapsulation -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🔒</div>
+                    <h3>Encapsulation</h3>
+                    <p class="pillar-desc">
+                        Restricting direct access to object states. All core attributes of `Vehicle` (ID, base rate, rented status) are marked `private`.
+                    </p>
+                    <code>private double baseRatePerDay;</code>
+                    <p class="pillar-impact">
+                        External code must use public getters and setters, allowing us to perform validation (e.g., preventing negative rental prices).
+                    </p>
+                </div>
+
+                <!-- Inheritance -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌿</div>
+                    <h3>Inheritance</h3>
+                    <p class="pillar-desc">
+                        Reusing code and establishing hierarchies. Specific vehicle classes extend the base `Vehicle` template using `extends`:
+                    </p>
+                    <code>public class Car extends Vehicle</code>
+                    <p class="pillar-impact">
+                        `Car`, `Motorcycle`, and `Truck` automatically inherit all common fields (brand, model) while adding specific properties (hasInsurance, cargoCapacity).
+                    </p>
+                </div>
+
+                <!-- Polymorphism -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🎭</div>
+                    <h3>Polymorphism</h3>
+                    <p class="pillar-desc">
+                        Taking many forms. We override `calculateRentalCost` across subclasses and store everything in a base-type array:
+                    </p>
+                    <code>Vehicle[] inventory = new Vehicle[10];</code>
+                    <p class="pillar-impact">
+                        Iterating through the array and calling `calculateRentalCost` triggers subclass-specific methods at runtime (Dynamic Method Dispatch).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emulator Section -->
+        <section id="emulator" class="emulator-section">
+            <div class="section-header">
+                <h2>Live Fleet Rental Simulator</h2>
+                <p>Interact with our custom simulated agency. All costs, rentals, and metrics calculations are computed using the same logic as our Java implementation.</p>
+            </div>
+
+            <!-- Stats Dashboard -->
+            <div class="stats-dashboard">
+                <div class="stat-card">
+                    <span class="stat-num" id="stat-total">8</span>
+                    <span class="stat-label">Total Fleet Size</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num accent-text" id="stat-rented">0</span>
+                    <span class="stat-label">Active Rentals</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num success-text" id="stat-available">8</span>
+                    <span class="stat-label">Available Vehicles</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" id="stat-revenue">$675.00</span>
+                    <span class="stat-label">Daily Base Revenue Cap</span>
+                </div>
+            </div>
+
+            <!-- Fleet Grid -->
+            <div class="fleet-grid" id="fleet-container">
+                <!-- JS Will render fleet items dynamically here -->
+            </div>
+        </section>
+
+        <!-- Java Code Browser Section -->
+        <section id="code" class="code-section">
+            <div class="section-header">
+                <h2>Java Code Browser</h2>
+                <p>Read the actual core Java source code files. Select a tab to see where and how the OOP pillars are implemented in the code.</p>
+            </div>
+
+            <div class="code-explorer">
+                <div class="code-tabs">
+                    <button class="tab-btn active" data-file="Vehicle.java">Vehicle.java <span class="tab-meta">Abstract Class</span></button>
+                    <button class="tab-btn" data-file="Car.java">Car.java <span class="tab-meta">Subclass</span></button>
+                    <button class="tab-btn" data-file="Motorcycle.java">Motorcycle.java <span class="tab-meta">Subclass</span></button>
+                    <button class="tab-btn" data-file="Truck.java">Truck.java <span class="tab-meta">Subclass</span></button>
+                    <button class="tab-btn" data-file="RentalAgency.java">RentalAgency.java <span class="tab-meta">Service Class</span></button>
+                    <button class="tab-btn" data-file="Main.java">Main.java <span class="tab-meta">Driver Class</span></button>
+                </div>
+                <div class="code-display">
+                    <div class="code-header">
+                        <span class="file-name" id="display-file-name">Vehicle.java</span>
+                        <button class="copy-btn" id="copy-code-btn">Copy Code</button>
+                    </div>
+                    <pre><code class="code-block" id="code-content">Loading code content...</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rental Dialog / Modal -->
+    <div id="rental-modal" class="modal">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <h3>Rent Vehicle</h3>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="vehicle-info-summary">
+                    <h4 id="modal-vehicle-title">Toyota Camry</h4>
+                    <p id="modal-vehicle-id">ID: C001</p>
+                    <p id="modal-vehicle-rate">Base Rate: $50.00 / day</p>
+                    <p id="modal-vehicle-details">Type details here...</p>
+                </div>
+                <form id="rental-form">
+                    <div class="form-group">
+                        <label for="rental-days">Rental Duration (Days):</label>
+                        <input type="number" id="rental-days" min="1" max="365" value="3" required>
+                    </div>
+                    <div class="receipt-preview" id="receipt-preview">
+                        <!-- Calculated receipt summary goes here -->
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Confirm Rental</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p>&copy; 2026 OOP Rentals. Java upsKilling Practice Project.</p>
+        <p>Built with modern HTML, CSS, JavaScript, and Three.js.</p>
+    </footer>
+
+    <!-- Main Javascript File -->
+    <script src="script.js"></script>
+</body>
+</html>
