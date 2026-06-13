@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound & Cinema | Favorite Ringtones & 12th Fail</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A premium showcase of my favorite WWE themes / ringtones and a special spotlight on the inspirational biographical movie 12th Fail." />
+    <meta name="author" content="Nayeer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+
+    <style>
+      /* --- DESIGN SYSTEM --- */
+      :root {
+        --bg-main: #06070a;
+        --bg-radial: radial-gradient(circle at 50% 50%, #0d111b 0%, #050608 100%);
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --glass-bg: rgba(13, 16, 26, 0.45);
+        --glass-border: rgba(255, 255, 255, 0.05);
+        --glass-border-hover: rgba(255, 255, 255, 0.12);
+        --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --font-serif: 'Playfair Display', Georgia, serif;
+        
+        /* General Accent */
+        --accent-glow: rgba(255, 126, 95, 0.15);
+      }
+
+      /* Wrestler Color Accents */
+      .card-cody {
+        --player-accent: #d4af37; /* Gold */
+        --player-accent-glow: rgba(212, 175, 55, 0.2);
+      }
+      .card-randy {
+        --player-accent: #10b981; /* Viper Green */
+        --player-accent-glow: rgba(16, 185, 129, 0.2);
+      }
+      .card-roman {
+        --player-accent: #3b82f6; /* OTC Blue */
+        --player-accent-glow: rgba(59, 130, 246, 0.2);
+      }
+      .card-jacob {
+        --player-accent: #ef4444; /* Samoan Red */
+        --player-accent-glow: rgba(239, 68, 68, 0.2);
+      }
+      .card-oba {
+        --player-accent: #f59e0b; /* Nigeria Gold */
+        --player-accent-glow: rgba(245, 158, 11, 0.2);
+      }
+
+      /* --- RESET & BASE STYLES --- */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background: var(--bg-main);
+        background-image: var(--bg-radial);
+        color: var(--text-primary);
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        line-height: 1.5;
+        padding: 3rem 1.5rem;
+      }
+
+      /* Subtle animated ambient background light */
+      body::before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+        top: -100px;
+        left: -100px;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      body::after {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(239, 68, 68, 0.05) 0%, transparent 70%);
+        bottom: -100px;
+        right: -100px;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      header {
+        position: relative;
+        z-index: 10;
+        max-width: 1200px;
+        margin: 0 auto 4rem auto;
+        text-align: center;
+      }
+
+      .badge-day {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #fff;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 0.5rem 1.5rem;
+        border-radius: 100px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+      }
+
+      h1 {
+        font-family: var(--font-serif);
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .subtitle {
+        color: var(--text-secondary);
+        font-size: 1.15rem;
+        max-width: 600px;
+        margin: 0 auto;
+        font-weight: 300;
+      }
+
+      main {
+        position: relative;
+        z-index: 10;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+      }
+
+      /* --- SECTION HEADERS --- */
+      .section-title {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        position: relative;
+        padding-bottom: 0.75rem;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(to right, #6366f1, transparent);
+        border-radius: 2px;
+      }
+
+      /* --- MUSIC PLAYER GRID --- */
+      .music-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 2rem;
+      }
+
+      /* Glassmorphic Player Card */
+      .player-card {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 2rem;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                    border-color 0.4s ease, 
+                    box-shadow 0.4s ease;
+      }
+
+      .player-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--glass-border-hover);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                    0 0 30px var(--player-accent-glow);
+      }
+
+      .player-header {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+
+      .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+        border: 1px solid var(--glass-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .player-card:hover .avatar {
+        transform: scale(1.08) rotate(3deg);
+        background: linear-gradient(135deg, var(--player-accent) 0%, rgba(255,255,255,0.05) 100%);
+        border-color: transparent;
+      }
+
+      .wrestler-details h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.25rem;
+      }
+
+      .wrestler-details p {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+      }
+
+      /* Custom Audio Controls */
+      .player-controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .play-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--player-accent);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        box-shadow: 0 6px 16px var(--player-accent-glow);
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                    box-shadow 0.3s ease,
+                    background-color 0.3s ease;
+      }
+
+      .play-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px var(--player-accent-glow);
+      }
+
+      .play-btn:active {
+        transform: scale(0.95);
+      }
+
+      .play-btn svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+
+      .play-btn .pause-icon {
+        display: none;
+      }
+
+      /* Playing state */
+      .player-card.playing .play-btn {
+        background: #fff;
+        color: #000;
+        box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+      }
+
+      .player-card.playing .play-btn .play-icon {
+        display: none;
+      }
+
+      .player-card.playing .play-btn .pause-icon {
+        display: block;
+      }
+
+      /* Progress Bar Area */
+      .progress-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .slider-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 6px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        outline: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .slider::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 6px;
+        border-radius: 10px;
+      }
+
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--player-accent);
+        cursor: pointer;
+        margin-top: -3px;
+        box-shadow: 0 0 10px var(--player-accent);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
+
+      .player-card.playing .slider::-webkit-slider-thumb {
+        background: #fff;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+      }
+
+      .slider::-webkit-slider-thumb:hover {
+        transform: scale(1.4);
+      }
+
+      .time-info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
+      }
+
+      /* --- MOVIE SPOTLIGHT SECTION --- */
+      .movie-spotlight {
+        position: relative;
+      }
+
+      .movie-card {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: 32px;
+        padding: 3rem;
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 3.5rem;
+        align-items: center;
+        transition: border-color 0.4s ease, box-shadow 0.4s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .movie-card:hover {
+        border-color: rgba(255, 126, 95, 0.2);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), 
+                    0 0 40px rgba(255, 126, 95, 0.08);
+      }
+
+      /* Warm spotlight glow in the background of movie card */
+      .movie-card::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(255, 126, 95, 0.1) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .movie-poster-container {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        background: #111422;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+                    0 0 0 1px rgba(255, 255, 255, 0.08);
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .movie-card:hover .movie-poster-container {
+        transform: scale(1.03) translateY(-4px);
+      }
+
+      .movie-poster {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.5s ease;
+      }
+
+      /* Hover glow on poster */
+      .movie-poster-container::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6);
+        pointer-events: none;
+      }
+
+      .movie-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .movie-badge-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .movie-badge {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.35rem 0.9rem;
+        border-radius: 100px;
+        letter-spacing: 0.5px;
+      }
+
+      .badge-rating {
+        background: #f59e0b;
+        color: #000;
+      }
+
+      .badge-genre {
+        background: rgba(99, 102, 241, 0.15);
+        color: #a5b4fc;
+        border: 1px solid rgba(99, 102, 241, 0.25);
+      }
+
+      .badge-award {
+        background: rgba(239, 68, 68, 0.15);
+        color: #fca5a5;
+        border: 1px solid rgba(239, 68, 68, 0.25);
+      }
+
+      .movie-title {
+        font-family: var(--font-serif);
+        font-size: 2.75rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+      }
+
+      .movie-meta {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .movie-meta span strong {
+        color: #e2e8f0;
+      }
+
+      .movie-divider {
+        height: 1px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.08), transparent);
+        width: 100%;
+      }
+
+      .movie-synopsis {
+        color: #cbd5e1;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        font-weight: 300;
+      }
+
+      .movie-quote {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-size: 1.25rem;
+        color: #ff9d80;
+        padding-left: 1.25rem;
+        border-left: 3px solid #ff7e5f;
+        margin: 0.5rem 0;
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        position: relative;
+        z-index: 10;
+        max-width: 1200px;
+        margin: 6rem auto 0 auto;
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 2rem;
+      }
+
+      footer p a {
+        color: #a5b4fc;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      footer p a:hover {
+        color: #fff;
+      }
+
+      /* --- RESPONSIVE LAYOUT --- */
+      @media (max-width: 900px) {
+        .movie-card {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+          padding: 2.5rem;
+        }
+
+        .movie-poster-container {
+          max-width: 280px;
+          margin: 0 auto;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 2rem 1rem;
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .section-title {
+          font-size: 1.75rem;
+        }
+
+        .movie-card {
+          padding: 1.5rem;
+        }
+
+        .movie-title {
+          font-size: 2.2rem;
+        }
+
+        .movie-meta {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .music-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Header Section -->
+    <header>
+      <div class="badge-day">Day 02</div>
+      <h1>Sound & Cinema</h1>
+      <p class="subtitle">A visual, premium showcase of my all-time favorite wrestler themes and the biographical drama masterpiece that inspired millions.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+      <!-- Section: Favorite Themes (Ringtones) -->
+      <section id="music-section">
+        <h2 class="section-title">Favorite Ringtones</h2>
+        
+        <div class="music-grid">
+          
+          <!-- Cody Rhodes Card -->
+          <div class="player-card card-cody" id="card-cody">
+            <audio id="audio-cody" src="./asset/cody_rhodes_theme (1).mp3" preload="metadata"></audio>
+            <div class="player-header">
+              <div class="avatar">👨‍🎤</div>
+              <div class="wrestler-details">
+                <h3>Cody Rhodes</h3>
+                <p>Kingdom</p>
+              </div>
+            </div>
+            <div class="player-controls">
+              <button class="play-btn" onclick="togglePlay('audio-cody')" aria-label="Play Cody Rhodes Theme">
+                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="progress-area">
+                <div class="slider-container">
+                  <input type="range" class="slider" id="slider-cody" min="0" max="100" value="0" aria-label="Seek track">
+                </div>
+                <div class="time-info">
+                  <span id="time-cody">0:00</span>
+                  <span id="duration-cody">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Randy Orton Card -->
+          <div class="player-card card-randy" id="card-randy">
+            <audio id="audio-randy" src="./asset/randy_orton_theme.mp3" preload="metadata"></audio>
+            <div class="player-header">
+              <div class="avatar">🤼‍♂️</div>
+              <div class="wrestler-details">
+                <h3>Randy Orton</h3>
+                <p>Voices</p>
+              </div>
+            </div>
+            <div class="player-controls">
+              <button class="play-btn" onclick="togglePlay('audio-randy')" aria-label="Play Randy Orton Theme">
+                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="progress-area">
+                <div class="slider-container">
+                  <input type="range" class="slider" id="slider-randy" min="0" max="100" value="0" aria-label="Seek track">
+                </div>
+                <div class="time-info">
+                  <span id="time-randy">0:00</span>
+                  <span id="duration-randy">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Roman Reigns Card -->
+          <div class="player-card card-roman" id="card-roman">
+            <audio id="audio-roman" src="./asset/otc.mp3" preload="metadata"></audio>
+            <div class="player-header">
+              <div class="avatar">🌟</div>
+              <div class="wrestler-details">
+                <h3>Roman Reigns</h3>
+                <p>Original Tribal Chief</p>
+              </div>
+            </div>
+            <div class="player-controls">
+              <button class="play-btn" onclick="togglePlay('audio-roman')" aria-label="Play Roman Reigns Theme">
+                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="progress-area">
+                <div class="slider-container">
+                  <input type="range" class="slider" id="slider-roman" min="0" max="100" value="0" aria-label="Seek track">
+                </div>
+                <div class="time-info">
+                  <span id="time-roman">0:00</span>
+                  <span id="duration-roman">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jacob Fatu Card -->
+          <div class="player-card card-jacob" id="card-jacob">
+            <audio id="audio-jacob" src="./asset/jacob_fatu_v2.mp3" preload="metadata"></audio>
+            <div class="player-header">
+              <div class="avatar">💀</div>
+              <div class="wrestler-details">
+                <h3>Jacob Fatu</h3>
+                <p>Werewolf Theme</p>
+              </div>
+            </div>
+            <div class="player-controls">
+              <button class="play-btn" onclick="togglePlay('audio-jacob')" aria-label="Play Jacob Fatu Theme">
+                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="progress-area">
+                <div class="slider-container">
+                  <input type="range" class="slider" id="slider-jacob" min="0" max="100" value="0" aria-label="Seek track">
+                </div>
+                <div class="time-info">
+                  <span id="time-jacob">0:00</span>
+                  <span id="duration-jacob">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Oba Femi Card -->
+          <div class="player-card card-oba" id="card-oba">
+            <audio id="audio-oba" src="./asset/oba_femi_nxt.mp3" preload="metadata"></audio>
+            <div class="player-header">
+              <div class="avatar">⚡</div>
+              <div class="wrestler-details">
+                <h3>Oba Femi</h3>
+                <p>Ruler Theme</p>
+              </div>
+            </div>
+            <div class="player-controls">
+              <button class="play-btn" onclick="togglePlay('audio-oba')" aria-label="Play Oba Femi Theme">
+                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="progress-area">
+                <div class="slider-container">
+                  <input type="range" class="slider" id="slider-oba" min="0" max="100" value="0" aria-label="Seek track">
+                </div>
+                <div class="time-info">
+                  <span id="time-oba">0:00</span>
+                  <span id="duration-oba">0:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section: Favorite Movie Spotlight -->
+      <section id="movie-section" class="movie-spotlight">
+        <h2 class="section-title">Favorite Movie of All Time</h2>
+        
+        <div class="movie-card">
+          <div class="movie-poster-container">
+            <img src="./asset/1.jpeg" alt="12th Fail Movie Poster" class="movie-poster" />
+          </div>
+          
+          <div class="movie-info">
+            <div class="movie-badge-group">
+              <span class="movie-badge badge-rating">★ 9.2 IMDb</span>
+              <span class="movie-badge badge-genre">Biographical Drama</span>
+              <span class="movie-badge badge-award">Filmfare Best Film</span>
+            </div>
+            
+            <h3 class="movie-title">12th Fail</h3>
+            
+            <div class="movie-meta">
+              <span><strong>Directed by:</strong> Vidhu Vinod Chopra</span>
+              <span><strong>Starring:</strong> Vikrant Massey, Medha Shankar</span>
+              <span><strong>Release:</strong> 2023</span>
+            </div>
+            
+            <div class="movie-divider"></div>
+            
+            <p class="movie-synopsis">
+              Based on the true story of IPS officer Manoj Kumar Sharma, <em>12th Fail</em> chronicles his journey from a small village in Chambal, where he failed his 12th-grade boards, to conquering the toughest civil service exam in India. It is a raw, emotional, and deeply moving portrayal of determination, integrity, and absolute resilience.
+            </p>
+            
+            <p class="movie-quote">
+              "Haar nahi maanunga... Restart!"
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Day 02 Mini Project. Crafted with 🤍 for <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    </footer>
+
+    <!-- Audio Player Logic -->
+    <script>
+      // Keep track of the currently playing audio element
+      let activeAudio = null;
+      let activeCard = null;
+
+      // Helper function to format time in mm:ss format
+      function formatTime(seconds) {
+        if (isNaN(seconds)) return "0:00";
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+      }
+
+      // Initialize all player behaviors
+      document.querySelectorAll('.player-card').forEach(card => {
+        const audio = card.querySelector('audio');
+        const slider = card.querySelector('.slider');
+        const timeEl = card.querySelector('.time-info span:first-child');
+        const durationEl = card.querySelector('.time-info span:last-child');
+
+        // Update slider and time display on metadata load
+        audio.addEventListener('loadedmetadata', () => {
+          durationEl.textContent = formatTime(audio.duration);
+          slider.max = Math.floor(audio.duration);
+        });
+
+        // Safe fallback in case metadata was already loaded
+        if (audio.readyState >= 1) {
+          durationEl.textContent = formatTime(audio.duration);
+          slider.max = Math.floor(audio.duration);
+        }
+
+        // Sync progress slider with actual time
+        audio.addEventListener('timeupdate', () => {
+          if (!slider.dataset.userScrubbing) {
+            slider.value = Math.floor(audio.currentTime);
+            timeEl.textContent = formatTime(audio.currentTime);
+            
+            // Highlight progress track
+            const pct = (slider.value / slider.max) * 100;
+            slider.style.background = `linear-gradient(to right, var(--player-accent) ${pct}%, rgba(255, 255, 255, 0.1) ${pct}%)`;
+          }
+        });
+
+        // Reset play state when audio ends
+        audio.addEventListener('ended', () => {
+          card.classList.remove('playing');
+          slider.value = 0;
+          timeEl.textContent = "0:00";
+          slider.style.background = `rgba(255, 255, 255, 0.1)`;
+          if (activeAudio === audio) {
+            activeAudio = null;
+            activeCard = null;
+          }
+        });
+
+        // Handle scrubbing interactions
+        slider.addEventListener('mousedown', () => {
+          slider.dataset.userScrubbing = "true";
+        });
+
+        slider.addEventListener('mouseup', () => {
+          delete slider.dataset.userScrubbing;
+          audio.currentTime = slider.value;
+        });
+
+        slider.addEventListener('input', () => {
+          timeEl.textContent = formatTime(slider.value);
+          const pct = (slider.value / slider.max) * 100;
+          slider.style.background = `linear-gradient(to right, var(--player-accent) ${pct}%, rgba(255, 255, 255, 0.1) ${pct}%)`;
+        });
+        
+        // Touch events for mobile compatibility
+        slider.addEventListener('touchstart', () => {
+          slider.dataset.userScrubbing = "true";
+        });
+        slider.addEventListener('touchend', () => {
+          delete slider.dataset.userScrubbing;
+          audio.currentTime = slider.value;
+        });
+      });
+
+      // Toggle Play/Pause mechanism
+      function togglePlay(audioId) {
+        const audio = document.getElementById(audioId);
+        const card = audio.closest('.player-card');
+
+        // If clicking a new audio element, pause the active one first
+        if (activeAudio && activeAudio !== audio) {
+          activeAudio.pause();
+          activeCard.classList.remove('playing');
+        }
+
+        if (audio.paused) {
+          audio.play().then(() => {
+            card.classList.add('playing');
+            activeAudio = audio;
+            activeCard = card;
+          }).catch(err => {
+            console.error("Audio playback error: ", err);
+          });
+        } else {
+          audio.pause();
+          card.classList.remove('playing');
+          activeAudio = null;
+          activeCard = null;
+        }
+      }
+    </script>
+  </body>
+</html>
