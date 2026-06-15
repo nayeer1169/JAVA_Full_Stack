@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="iQOO — Monster Inside. Discover the ultimate fusion of raw power and refined design. Flagship performance, engineered for the fearless.">
+  <title>iQOO — Monster Inside</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-size='24'%3E⚡%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="main-nav" aria-label="Primary navigation">
+    <a href="#" class="nav__brand">
+      iQOO<span class="nav__brand-accent">.</span>
+    </a>
+    <div class="nav__links">
+      <a href="#specs" class="nav__link">Specs</a>
+      <a href="#features" class="nav__link">Features</a>
+      <a href="#design" class="nav__link">Design</a>
+      <a href="#performance" class="nav__link">Performance</a>
+      <a href="#colorways" class="nav__link">Colors</a>
+      <button class="btn-ghost" id="nav-cta">EXPLORE</button>
+    </div>
+    <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <a href="#specs" class="mobile-nav__link">Specs</a>
+    <a href="#features" class="mobile-nav__link">Features</a>
+    <a href="#design" class="mobile-nav__link">Design</a>
+    <a href="#performance" class="mobile-nav__link">Performance</a>
+    <a href="#colorways" class="mobile-nav__link">Colors</a>
+    <button class="btn-ghost btn-ghost--accent">EXPLORE</button>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <!-- 3D Prism decoration -->
+    <div class="prism prism--hero" aria-hidden="true"></div>
+
+    <!-- Video background — replace src with your video -->
+    <div class="hero__video-wrapper">
+      <video class="hero__video" autoplay muted loop playsinline role="none" aria-hidden="true" width="1920"
+        height="1080" poster="">
+        <!-- 
+          iQOO Hero Video — Looping with glass overlay
+        -->
+        <source src="Create_website_hero_video_202606110103.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Glassmorphism overlay -->
+    <div class="hero__glass-overlay" aria-hidden="true"></div>
+
+    <!-- Hero content -->
+    <div class="hero__content">
+      <p class="hero__tagline">Neo Flagship · 2025</p>
+      <h1 class="hero__title">
+        <span class="bold">Monster</span> Inside.
+      </h1>
+      <p class="hero__subtitle">
+        Unleash the beast. Snapdragon 8 Elite, 6000mAh power cell,
+        and a 144Hz AMOLED canvas — all forged in a single obsidian shell.
+      </p>
+      <div class="hero__cta-group">
+        <button class="btn-ghost btn-ghost--accent" id="hero-explore-btn">DISCOVER MORE</button>
+        <button class="btn-ghost" id="hero-specs-btn">VIEW SPECS</button>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== SPECS SECTION ========== -->
+  <section class="section specs" id="specs">
+    <div class="reveal">
+      <p class="section__label">Raw Numbers</p>
+      <h2 class="section__headline">
+        Built to <span class="bold">dominate.</span>
+      </h2>
+    </div>
+    <div class="specs__grid">
+      <div class="glass-card spec-card reveal reveal-delay-1">
+        <svg class="spec-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="8" y="8" width="32" height="32" rx="4" stroke-width="1.5" />
+          <line x1="16" y1="4" x2="16" y2="8" stroke-width="1.5" />
+          <line x1="24" y1="4" x2="24" y2="8" stroke-width="1.5" />
+          <line x1="32" y1="4" x2="32" y2="8" stroke-width="1.5" />
+          <line x1="16" y1="40" x2="16" y2="44" stroke-width="1.5" />
+          <line x1="24" y1="40" x2="24" y2="44" stroke-width="1.5" />
+          <line x1="32" y1="40" x2="32" y2="44" stroke-width="1.5" />
+          <line x1="4" y1="16" x2="8" y2="16" stroke-width="1.5" />
+          <line x1="4" y1="24" x2="8" y2="24" stroke-width="1.5" />
+          <line x1="4" y1="32" x2="8" y2="32" stroke-width="1.5" />
+          <line x1="40" y1="16" x2="44" y2="16" stroke-width="1.5" />
+          <line x1="40" y1="24" x2="44" y2="24" stroke-width="1.5" />
+          <line x1="40" y1="32" x2="44" y2="32" stroke-width="1.5" />
+        </svg>
+        <p class="spec-card__value">Snapdragon 8 Elite</p>
+        <p class="spec-card__label">Flagship Chipset</p>
+      </div>
+      <div class="glass-card spec-card reveal reveal-delay-2">
+        <svg class="spec-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="6" y="4" width="36" height="40" rx="4" stroke-width="1.5" />
+          <line x1="14" y1="12" x2="34" y2="12" stroke-width="1.5" />
+          <line x1="14" y1="20" x2="34" y2="20" stroke-width="1.5" />
+          <line x1="14" y1="28" x2="34" y2="28" stroke-width="1.5" />
+          <line x1="14" y1="36" x2="24" y2="36" stroke-width="1.5" />
+        </svg>
+        <p class="spec-card__value">16 GB</p>
+        <p class="spec-card__label">LPDDR5X RAM</p>
+      </div>
+      <div class="glass-card spec-card reveal reveal-delay-3">
+        <svg class="spec-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="4" y="10" width="40" height="28" rx="3" stroke-width="1.5" />
+          <circle cx="24" cy="24" r="6" stroke-width="1.5" />
+          <line x1="24" y1="18" x2="24" y2="13" stroke-width="1.5" />
+        </svg>
+        <p class="spec-card__value">144 Hz</p>
+        <p class="spec-card__label">LTPO AMOLED</p>
+      </div>
+      <div class="glass-card spec-card reveal reveal-delay-4">
+        <svg class="spec-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="14" y="6" width="20" height="36" rx="3" stroke-width="1.5" />
+          <line x1="20" y1="14" x2="28" y2="14" stroke-width="1.5" />
+          <line x1="20" y1="34" x2="28" y2="34" stroke-width="1.5" />
+        </svg>
+        <p class="spec-card__value">6000 mAh</p>
+        <p class="spec-card__label">Power Cell</p>
+      </div>
+      <div class="glass-card spec-card reveal reveal-delay-1">
+        <svg class="spec-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="16" stroke-width="1.5" />
+          <circle cx="24" cy="24" r="8" stroke-width="1.5" />
+          <circle cx="24" cy="24" r="2" fill="currentColor" />
+        </svg>
+        <p class="spec-card__value">50 MP</p>
+        <p class="spec-card__label">OIS Main Camera</p>
+      </div>
+      <div class="glass-card spec-card reveal reveal-delay-2">
+        <svg class="spec-card__icon" viewBox="0 0 48 48" aria-hidden="true">
+          <polygon points="24,4 30,18 44,20 34,30 36,44 24,38 12,44 14,30 4,20 18,18" stroke-width="1.5" />
+        </svg>
+        <p class="spec-card__value">120W</p>
+        <p class="spec-card__label">FlashCharge</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES SECTION ========== -->
+  <section class="section" id="features">
+    <div class="reveal">
+      <p class="section__label">Engineering</p>
+      <h2 class="section__headline">
+        Every detail, <span class="bold">obsessed.</span>
+      </h2>
+    </div>
+    <div class="features__grid">
+      <div class="glass-card feature-card reveal reveal-delay-1">
+        <p class="feature-card__number">01</p>
+        <h3 class="feature-card__title">Vapor Chamber Cooling</h3>
+        <p class="feature-card__desc">
+          A 6100mm² vapor chamber keeps the Snapdragon 8 Elite running at peak
+          performance during marathon gaming sessions — no throttling, no compromise.
+        </p>
+      </div>
+      <div class="glass-card feature-card reveal reveal-delay-2">
+        <p class="feature-card__number">02</p>
+        <h3 class="feature-card__title">Monster Touch Response</h3>
+        <p class="feature-card__desc">
+          1200Hz instantaneous touch sampling rate with dual X-axis linear motors
+          delivers haptic precision that rivals dedicated gaming handhelds.
+        </p>
+      </div>
+      <div class="glass-card feature-card reveal reveal-delay-3">
+        <p class="feature-card__number">03</p>
+        <h3 class="feature-card__title">Cinematic Night Vision</h3>
+        <p class="feature-card__desc">
+          AI-powered night mode with extreme HDR captures clean, noise-free images
+          even in near-total darkness — see what the eye cannot.
+        </p>
+      </div>
+      <div class="glass-card feature-card reveal reveal-delay-4">
+        <p class="feature-card__number">04</p>
+        <h3 class="feature-card__title">120W FlashCharge</h3>
+        <p class="feature-card__desc">
+          Zero to 100% in just 23 minutes. Dual-cell architecture with intelligent
+          thermal management extends the battery lifespan beyond 1600 charge cycles.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DESIGN SECTION ========== -->
+  <section class="section design" id="design">
+    <div class="prism prism--left" aria-hidden="true"></div>
+    <div class="design__showcase">
+      <div class="design__image-wrapper reveal">
+        <img src="phone-design.png"
+          alt="iQOO Neo flagship phone — front and back view showing edge-to-edge AMOLED display and triple camera system"
+          width="600" height="800" id="design-phone-image" loading="lazy">
+      </div>
+      <div class="design__details reveal reveal-delay-2">
+        <p class="section__label">Craftsmanship</p>
+        <h2 class="section__headline">
+          Obsidian <span class="bold">precision.</span>
+        </h2>
+        <p class="design__text">
+          Carved from aerospace-grade aluminium with a flat-edge design language
+          inspired by stealth geometry. Every surface, every chamfer, every seam
+          engineered to disappear — leaving only the display.
+        </p>
+        <div class="design__specs-list">
+          <div class="design__spec-item">
+            <span class="design__spec-label">Display</span>
+            <span class="design__spec-value">6.78" 2K+ LTPO AMOLED</span>
+          </div>
+          <div class="design__spec-item">
+            <span class="design__spec-label">Brightness</span>
+            <span class="design__spec-value">4500 nits Peak</span>
+          </div>
+          <div class="design__spec-item">
+            <span class="design__spec-label">Body</span>
+            <span class="design__spec-value">164.2 × 75.8 × 8.15 mm</span>
+          </div>
+          <div class="design__spec-item">
+            <span class="design__spec-label">Weight</span>
+            <span class="design__spec-value">194.8g</span>
+          </div>
+          <div class="design__spec-item">
+            <span class="design__spec-label">Protection</span>
+            <span class="design__spec-value">IP68 · Schott Xensation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PERFORMANCE SECTION ========== -->
+  <section class="section" id="performance">
+    <div class="prism prism--right" aria-hidden="true"></div>
+    <div class="performance__content">
+      <div class="performance__left reveal">
+        <p class="section__label">Benchmarks</p>
+        <h2 class="section__headline">
+          Raw <span class="bold">power.</span>
+        </h2>
+        <p class="performance__text">
+          The Snapdragon 8 Elite chipset paired with 16GB LPDDR5X and UFS 4.0 storage
+          delivers flagship-annihilating benchmark scores. This isn't incremental —
+          it's a generational leap.
+        </p>
+        <div class="hero__cta-group" style="justify-content: flex-start;">
+          <button class="btn-ghost btn-ghost--accent">FULL BENCHMARKS</button>
+        </div>
+      </div>
+      <div class="performance__right reveal reveal-delay-2">
+        <div class="benchmark-bars" id="benchmark-bars">
+          <div class="benchmark-bar">
+            <div class="benchmark-bar__header">
+              <span class="benchmark-bar__label">AnTuTu V10</span>
+              <span class="benchmark-bar__value">2,350,000</span>
+            </div>
+            <div class="benchmark-bar__track">
+              <div class="benchmark-bar__fill" style="--target-width: 95%"></div>
+            </div>
+          </div>
+          <div class="benchmark-bar">
+            <div class="benchmark-bar__header">
+              <span class="benchmark-bar__label">Geekbench 6 (Multi)</span>
+              <span class="benchmark-bar__value">8,200</span>
+            </div>
+            <div class="benchmark-bar__track">
+              <div class="benchmark-bar__fill" style="--target-width: 88%"></div>
+            </div>
+          </div>
+          <div class="benchmark-bar">
+            <div class="benchmark-bar__header">
+              <span class="benchmark-bar__label">3DMark Wild Life</span>
+              <span class="benchmark-bar__value">18,500</span>
+            </div>
+            <div class="benchmark-bar__track">
+              <div class="benchmark-bar__fill" style="--target-width: 92%"></div>
+            </div>
+          </div>
+          <div class="benchmark-bar">
+            <div class="benchmark-bar__header">
+              <span class="benchmark-bar__label">Storage Read Speed</span>
+              <span class="benchmark-bar__value">4,200 MB/s</span>
+            </div>
+            <div class="benchmark-bar__track">
+              <div class="benchmark-bar__fill" style="--target-width: 85%"></div>
+            </div>
+          </div>
+          <div class="benchmark-bar">
+            <div class="benchmark-bar__header">
+              <span class="benchmark-bar__label">AI Benchmark</span>
+              <span class="benchmark-bar__value">3,800</span>
+            </div>
+            <div class="benchmark-bar__track">
+              <div class="benchmark-bar__fill" style="--target-width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MANIFESTO SECTION ========== -->
+  <section class="section manifesto" id="manifesto">
+    <div class="reveal">
+      <p class="manifesto__text">
+        We don't make phones for the <span class="bold">cautious.</span>
+        We engineer weapons for the <span class="bold">relentless</span> —
+        those who refuse to settle, refuse to slow down,
+        and refuse to be <span class="bold">ordinary.</span>
+      </p>
+      <button class="btn-ghost btn-ghost--accent" id="manifesto-cta">JOIN THE MONSTER</button>
+    </div>
+  </section>
+
+  <!-- ========== COLORWAYS SECTION ========== -->
+  <section class="section colorways" id="colorways">
+    <div class="reveal">
+      <p class="section__label">Finish</p>
+      <h2 class="section__headline">
+        Choose your <span class="bold">weapon.</span>
+      </h2>
+    </div>
+    <div class="colorways__grid">
+      <div class="glass-card color-card reveal reveal-delay-1">
+        <div class="color-card__swatch" style="background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #16213e);"></div>
+        <p class="color-card__name">Stealth Black</p>
+        <p class="color-card__code">Matte · Anti-fingerprint</p>
+      </div>
+      <div class="glass-card color-card reveal reveal-delay-2">
+        <div class="color-card__swatch" style="background: linear-gradient(135deg, #2c3e50, #4ca1af, #6dd5fa);"></div>
+        <p class="color-card__name">Glacier Blue</p>
+        <p class="color-card__code">Frosted Glass</p>
+      </div>
+      <div class="glass-card color-card reveal reveal-delay-3">
+        <div class="color-card__swatch" style="background: linear-gradient(135deg, #232526, #414345, #636e72);"></div>
+        <p class="color-card__name">Titanium Grey</p>
+        <p class="color-card__code">Brushed Metal</p>
+      </div>
+      <div class="glass-card color-card reveal reveal-delay-4">
+        <div class="color-card__swatch" style="background: linear-gradient(135deg, #f5af19, #f12711, #e44d26);"></div>
+        <p class="color-card__name">Legend Edition</p>
+        <p class="color-card__code">BMW Motorsport</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="footer__content">
+      <div class="footer__brand">
+        <p class="footer__brand-name">iQOO</p>
+        <p class="footer__brand-desc">
+          Monster Inside. Born from vivo's engineering labs,
+          iQOO creates smartphones that push boundaries —
+          blending raw performance with fearless design.
+        </p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Product</p>
+        <div class="footer__col-links">
+          <a href="#">iQOO 13</a>
+          <a href="#">iQOO Neo 10</a>
+          <a href="#">iQOO Z9x</a>
+          <a href="#">Compare</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Support</p>
+        <div class="footer__col-links">
+          <a href="#">Service Center</a>
+          <a href="#">Warranty</a>
+          <a href="#">FAQs</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Company</p>
+        <div class="footer__col-links">
+          <a href="#">About iQOO</a>
+          <a href="#">Newsroom</a>
+          <a href="#">Careers</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2025 iQOO. All rights reserved. Monster Inside is a registered trademark.</p>
+      <div class="footer__socials">
+        <!-- Twitter/X -->
+        <a href="#" aria-label="Follow iQOO on X">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" stroke-width="1.5">
+            <path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.4L20 4h-2l-5.2 6.4L8 4H4z" />
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" aria-label="Follow iQOO on Instagram">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4.5" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="#" aria-label="Subscribe to iQOO on YouTube">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" stroke-width="1.5">
+            <rect x="2" y="5" width="20" height="14" rx="4" />
+            <polygon points="10,8.5 16,12 10,15.5" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

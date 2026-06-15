@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield — Cybersecurity Awareness Hub</title>
+  <meta name="description"
+    content="Navigate the digital battlefield with confidence. Learn about cyber threats, password security, phishing, and best practices to protect yourself online." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="CyberShield Home">
+        <span class="nav__logo-icon" aria-hidden="true">⬡</span>
+        <span class="nav__logo-text">CyberShield</span>
+      </a>
+
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="nav-menu">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="#attacks" class="nav__link">Threats</a></li>
+        <li><a href="#passwords" class="nav__link">Passwords</a></li>
+        <li><a href="#phishing" class="nav__link">Phishing</a></li>
+        <li><a href="#tips" class="nav__link">Tips</a></li>
+        <li><a href="#resources" class="nav__link">Resources</a></li>
+        <li>
+          <a href="#resources" class="nav__cta" id="nav-cta-btn">Get Protected</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="hero__scan-line" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="label hero__label" aria-label="Section label">
+          01 — The Digital Battlefield
+        </p>
+        <h1 class="display hero__heading" id="hero-heading">
+          Your Data<br />
+          <em>Under Siege</em>
+        </h1>
+        <p class="hero__sub body">
+          Every 39 seconds, a cyberattack strikes somewhere on Earth.
+          Understand the threats. Arm yourself with knowledge. Defend what
+          matters.
+        </p>
+        <div class="hero__actions">
+          <a href="#attacks" class="btn btn--primary" id="hero-explore-btn">Explore Threats</a>
+          <a href="#resources" class="btn btn--ghost" id="hero-resources-btn">Free Resources</a>
+        </div>
+
+        <!-- Live Stats Bar -->
+        <div class="hero__stats" role="list" aria-label="Cybersecurity statistics">
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number" id="stat-attacks">2,244</span>
+            <span class="label hero__stat-label">Daily Attacks</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number">$4.88M</span>
+            <span class="label hero__stat-label">Avg. Breach Cost</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number">95%</span>
+            <span class="label hero__stat-label">Human Error</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Floating Card -->
+      <div class="hero__card-wrap" aria-hidden="true">
+        <div class="card-3d" id="card-3d">
+          <div class="card-3d__inner">
+            <div class="card-3d__glow"></div>
+            <div class="card-3d__icon-wrap">
+              <svg class="card-3d__shield" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M40 4L8 18V46C8 64.8 22.4 82.6 40 88C57.6 82.6 72 64.8 72 46V18L40 4Z" stroke="#DC0000"
+                  stroke-width="2" fill="none" />
+                <path d="M40 16L18 26V46C18 59.4 27.8 71.8 40 76C52.2 71.8 62 59.4 62 46V26L40 16Z" fill="#DC0000"
+                  fill-opacity="0.12" />
+                <path d="M30 46L37 53L52 38" stroke="#DC0000" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="card-3d__label-row">
+              <div>
+                <p class="card-3d__title">Threat Level</p>
+                <p class="card-3d__status">ELEVATED</p>
+              </div>
+              <div class="card-3d__badge">LIVE</div>
+            </div>
+            <div class="card-3d__bars" aria-hidden="true">
+              <div class="card-3d__bar" style="--w: 85%; --delay: 0s"></div>
+              <div class="card-3d__bar" style="--w: 62%; --delay: 0.2s"></div>
+              <div class="card-3d__bar" style="--w: 91%; --delay: 0.4s"></div>
+              <div class="card-3d__bar" style="--w: 44%; --delay: 0.6s"></div>
+            </div>
+            <div class="card-3d__footer">
+              <span class="label">Vector Analysis</span>
+              <span class="label" style="color: var(--tertiary)">↑ 12% this week</span>
+            </div>
+
+            <!-- Floating particles -->
+            <div class="card-3d__particle" style="--x: 10%; --y: 20%; --dur: 3.2s"></div>
+            <div class="card-3d__particle" style="--x: 80%; --y: 70%; --dur: 4s"></div>
+            <div class="card-3d__particle" style="--x: 50%; --y: 10%; --dur: 2.8s"></div>
+            <div class="card-3d__particle" style="--x: 20%; --y: 80%; --dur: 3.6s"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <a href="#attacks" class="hero__scroll-cue" aria-label="Scroll to threats section">
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+        <span class="label">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ===================== COMMON ATTACKS ===================== -->
+    <section class="section attacks" id="attacks" aria-labelledby="attacks-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="label section__label">02 — Common Attacks</p>
+          <h2 class="h1" id="attacks-heading">
+            Know Your<br /><em>Enemy</em>
+          </h2>
+          <p class="body section__desc">
+            Threat actors exploit predictable human behavior and unpatched
+            systems. These are the weapons they wield against you every single
+            day.
+          </p>
+        </div>
+
+        <div class="attacks__grid">
+          <article class="attack-card reveal" id="attack-malware" tabindex="0" aria-labelledby="attack-malware-title">
+            <div class="attack-card__accent" aria-hidden="true"></div>
+            <div class="attack-card__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M14 20h12M20 14v12" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="20" cy="20" r="4" fill="#DC0000" fill-opacity="0.2" stroke="#DC0000" stroke-width="1" />
+              </svg>
+            </div>
+            <p class="label attack-card__number">01</p>
+            <h3 class="attack-card__title" id="attack-malware-title">
+              Malware
+            </h3>
+            <p class="body attack-card__desc">
+              Malicious software — viruses, worms, trojans, ransomware —
+              designed to infiltrate, damage, or hold your system hostage for
+              ransom.
+            </p>
+            <div class="attack-card__risk" aria-label="Risk level: Critical">
+              <span class="label attack-card__risk-label">Risk</span>
+              <div class="attack-card__risk-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="attack-card__risk-fill" style="--fill: 95%"></div>
+              </div>
+              <span class="label attack-card__risk-val">Critical</span>
+            </div>
+          </article>
+
+          <article class="attack-card reveal" id="attack-ransomware" tabindex="0"
+            aria-labelledby="attack-ransomware-title">
+            <div class="attack-card__accent" aria-hidden="true"></div>
+            <div class="attack-card__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="18" width="20" height="14" rx="2" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M14 18v-4a6 6 0 0112 0v4" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="20" cy="25" r="2" fill="#DC0000" />
+              </svg>
+            </div>
+            <p class="label attack-card__number">02</p>
+            <h3 class="attack-card__title" id="attack-ransomware-title">
+              Ransomware
+            </h3>
+            <p class="body attack-card__desc">
+              Encrypts your files and demands payment for the decryption key.
+              Average ransom demand exceeded $1.5 million in 2024.
+            </p>
+            <div class="attack-card__risk" aria-label="Risk level: Severe">
+              <span class="label attack-card__risk-label">Risk</span>
+              <div class="attack-card__risk-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="attack-card__risk-fill" style="--fill: 88%"></div>
+              </div>
+              <span class="label attack-card__risk-val">Severe</span>
+            </div>
+          </article>
+
+          <article class="attack-card reveal" id="attack-mitm" tabindex="0" aria-labelledby="attack-mitm-title">
+            <div class="attack-card__accent" aria-hidden="true"></div>
+            <div class="attack-card__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="20" r="4" stroke="#DC0000" stroke-width="1.5" />
+                <circle cx="30" cy="20" r="4" stroke="#DC0000" stroke-width="1.5" />
+                <circle cx="20" cy="20" r="5" fill="#DC0000" fill-opacity="0.15" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M14 20h2M24 20h2" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <p class="label attack-card__number">03</p>
+            <h3 class="attack-card__title" id="attack-mitm-title">
+              Man-in-the-Middle
+            </h3>
+            <p class="body attack-card__desc">
+              An attacker secretly intercepts and relays communications
+              between two parties, eavesdropping or altering data in transit.
+            </p>
+            <div class="attack-card__risk" aria-label="Risk level: High">
+              <span class="label attack-card__risk-label">Risk</span>
+              <div class="attack-card__risk-bar" role="progressbar" aria-valuenow="74" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="attack-card__risk-fill" style="--fill: 74%"></div>
+              </div>
+              <span class="label attack-card__risk-val">High</span>
+            </div>
+          </article>
+
+          <article class="attack-card reveal" id="attack-ddos" tabindex="0" aria-labelledby="attack-ddos-title">
+            <div class="attack-card__accent" aria-hidden="true"></div>
+            <div class="attack-card__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="6" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M8 20h4M28 20h4M20 8v4M20 28v4" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 12l2.8 2.8M25.2 25.2L28 28M12 28l2.8-2.8M25.2 14.8L28 12" stroke="#DC0000"
+                  stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <p class="label attack-card__number">04</p>
+            <h3 class="attack-card__title" id="attack-ddos-title">
+              DDoS Attack
+            </h3>
+            <p class="body attack-card__desc">
+              Floods your server with traffic from thousands of compromised
+              machines, rendering your service completely unavailable.
+            </p>
+            <div class="attack-card__risk" aria-label="Risk level: High">
+              <span class="label attack-card__risk-label">Risk</span>
+              <div class="attack-card__risk-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="attack-card__risk-fill" style="--fill: 70%"></div>
+              </div>
+              <span class="label attack-card__risk-val">High</span>
+            </div>
+          </article>
+
+          <article class="attack-card reveal" id="attack-sqli" tabindex="0" aria-labelledby="attack-sqli-title">
+            <div class="attack-card__accent" aria-hidden="true"></div>
+            <div class="attack-card__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="24" height="20" rx="2" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M14 17l4 3-4 3M22 23h4" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="label attack-card__number">05</p>
+            <h3 class="attack-card__title" id="attack-sqli-title">
+              SQL Injection
+            </h3>
+            <p class="body attack-card__desc">
+              Attackers insert malicious code into database queries, bypassing
+              authentication and extracting sensitive records from databases.
+            </p>
+            <div class="attack-card__risk" aria-label="Risk level: Moderate">
+              <span class="label attack-card__risk-label">Risk</span>
+              <div class="attack-card__risk-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="attack-card__risk-fill" style="--fill: 65%"></div>
+              </div>
+              <span class="label attack-card__risk-val">Moderate</span>
+            </div>
+          </article>
+
+          <article class="attack-card reveal" id="attack-social" tabindex="0" aria-labelledby="attack-social-title">
+            <div class="attack-card__accent" aria-hidden="true"></div>
+            <div class="attack-card__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="14" r="5" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M10 32c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#DC0000" stroke-width="1.5"
+                  stroke-linecap="round" />
+                <path d="M28 18l4-4M28 22l4 0" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <p class="label attack-card__number">06</p>
+            <h3 class="attack-card__title" id="attack-social-title">
+              Social Engineering
+            </h3>
+            <p class="body attack-card__desc">
+              Psychological manipulation that tricks individuals into
+              revealing confidential information or performing
+              security-compromising actions.
+            </p>
+            <div class="attack-card__risk" aria-label="Risk level: Severe">
+              <span class="label attack-card__risk-label">Risk</span>
+              <div class="attack-card__risk-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="attack-card__risk-fill" style="--fill: 82%"></div>
+              </div>
+              <span class="label attack-card__risk-val">Severe</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PASSWORD SECURITY ===================== -->
+    <section class="section passwords" id="passwords" aria-labelledby="passwords-heading">
+      <div class="container">
+        <div class="passwords__layout">
+          <div class="passwords__left reveal">
+            <p class="label section__label">03 — Password Security</p>
+            <h2 class="h1" id="passwords-heading">
+              Your First<br /><em>Line of Defence</em>
+            </h2>
+            <p class="body">
+              81% of data breaches involve stolen or weak passwords. A strong
+              password strategy is the single most impactful step you can take
+              right now.
+            </p>
+
+            <div class="strength-demo" aria-label="Password strength demonstration">
+              <label class="label strength-demo__label" for="pw-input">Test Your Password Strength</label>
+              <div class="strength-demo__field">
+                <input type="password" id="pw-input" class="strength-demo__input" placeholder="Enter a password…"
+                  autocomplete="new-password" aria-describedby="pw-strength-desc" />
+                <button class="strength-demo__toggle" id="pw-toggle" aria-label="Show password" type="button">
+                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M1 10s3-6 9-6 9 6 9 6-3 6-9 6-9-6-9-6z" stroke="currentColor" stroke-width="1.5" />
+                    <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5" />
+                  </svg>
+                </button>
+              </div>
+              <div class="strength-meter" aria-live="polite">
+                <div class="strength-meter__bar" id="strength-bar">
+                  <div class="strength-meter__fill" id="strength-fill"></div>
+                </div>
+                <p class="label strength-meter__label" id="pw-strength-desc" aria-live="polite">
+                  Enter a password above
+                </p>
+              </div>
+            </div>
+
+            <ul class="pw-rules" role="list" aria-label="Password rules">
+              <li class="pw-rule" id="rule-length" role="listitem">
+                <span class="pw-rule__icon" aria-hidden="true">✕</span>
+                <span class="body">At least 12 characters long</span>
+              </li>
+              <li class="pw-rule" id="rule-upper" role="listitem">
+                <span class="pw-rule__icon" aria-hidden="true">✕</span>
+                <span class="body">Contains uppercase letters</span>
+              </li>
+              <li class="pw-rule" id="rule-lower" role="listitem">
+                <span class="pw-rule__icon" aria-hidden="true">✕</span>
+                <span class="body">Contains lowercase letters</span>
+              </li>
+              <li class="pw-rule" id="rule-number" role="listitem">
+                <span class="pw-rule__icon" aria-hidden="true">✕</span>
+                <span class="body">Contains numbers</span>
+              </li>
+              <li class="pw-rule" id="rule-special" role="listitem">
+                <span class="pw-rule__icon" aria-hidden="true">✕</span>
+                <span class="body">Contains special characters (!@#$…)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="passwords__right reveal">
+            <div class="pw-tips">
+              <h3 class="label pw-tips__heading">Password Best Practices</h3>
+              <div class="pw-tip-card" id="pw-tip-1">
+                <span class="pw-tip-card__num label">01</span>
+                <div>
+                  <p class="pw-tip-card__title">Use a Password Manager</p>
+                  <p class="body pw-tip-card__body">
+                    Tools like Bitwarden or 1Password generate and store
+                    unique passwords for every site. Never reuse passwords.
+                  </p>
+                </div>
+              </div>
+              <div class="pw-tip-card" id="pw-tip-2">
+                <span class="pw-tip-card__num label">02</span>
+                <div>
+                  <p class="pw-tip-card__title">Enable Multi-Factor Auth</p>
+                  <p class="body pw-tip-card__body">
+                    MFA blocks 99.9% of automated attacks. Use an
+                    authenticator app, not SMS, for maximum security.
+                  </p>
+                </div>
+              </div>
+              <div class="pw-tip-card" id="pw-tip-3">
+                <span class="pw-tip-card__num label">03</span>
+                <div>
+                  <p class="pw-tip-card__title">Use Passphrases</p>
+                  <p class="body pw-tip-card__body">
+                    String 4–5 random words together:
+                    "purple-volcano-7-lantern" is more secure and memorable
+                    than "P@ssw0rd".
+                  </p>
+                </div>
+              </div>
+              <div class="pw-tip-card" id="pw-tip-4">
+                <span class="pw-tip-card__num label">04</span>
+                <div>
+                  <p class="pw-tip-card__title">Audit Breached Passwords</p>
+                  <p class="body pw-tip-card__body">
+                    Check haveibeenpwned.com regularly. If your email appears
+                    in a breach, change those passwords immediately.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PHISHING AWARENESS ===================== -->
+    <section class="section phishing" id="phishing" aria-labelledby="phishing-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="label section__label">04 — Phishing Awareness</p>
+          <h2 class="h1" id="phishing-heading">
+            Don't Take<br /><em>the Bait</em>
+          </h2>
+          <p class="body section__desc">
+            3.4 billion phishing emails are sent every day. Learn to identify
+            the hallmarks before you click.
+          </p>
+        </div>
+
+        <div class="phishing__layout">
+          <div class="email-mock reveal" role="article" aria-label="Phishing email example">
+            <div class="email-mock__header">
+              <span class="label" style="color: var(--secondary)">From:</span>
+              <span class="body email-mock__from">security-alert@paypa1.com</span>
+              <span class="email-mock__badge label" aria-label="Warning: suspicious sender">⚠ SUSPICIOUS</span>
+            </div>
+            <div class="email-mock__subject">
+              <span class="label" style="color: var(--secondary)">Subject:</span>
+              <span class="body">⚡ URGENT: Your account will be suspended in 24 hours!</span>
+            </div>
+            <hr class="email-mock__divider" aria-hidden="true" />
+            <div class="email-mock__body">
+              <p class="body">Dear Valued Customer,</p>
+              <p class="body email-mock__highlight" data-flag="Urgency &amp; fear tactics">
+                We have detected <strong>suspicious activity</strong> on your
+                account. Your account will be
+                <strong>permanently suspended</strong> if you do not verify
+                immediately.
+              </p>
+              <a href="#phishing" class="email-mock__link body" aria-label="Fake link — do not click"
+                id="phishing-fake-link" data-flag="Suspicious URL — paypa1 not paypal">
+                → Click here to verify your account now
+              </a>
+              <p class="body" style="margin-top: 1rem">
+                Sincerely,<br />
+                <span class="email-mock__highlight" data-flag="Generic, no name given">The Security Team</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="phishing__flags reveal">
+            <h3 class="label phishing__flags-title">Red Flags Identified</h3>
+            <ul class="flag-list" role="list">
+              <li class="flag-item" id="flag-urgency" role="listitem">
+                <span class="flag-item__icon" aria-hidden="true">🚩</span>
+                <div>
+                  <p class="flag-item__title">Artificial Urgency</p>
+                  <p class="body flag-item__desc">
+                    Phrases like "24 hours" and "act now" are designed to stop
+                    you from thinking critically.
+                  </p>
+                </div>
+              </li>
+              <li class="flag-item" id="flag-spoofed" role="listitem">
+                <span class="flag-item__icon" aria-hidden="true">🚩</span>
+                <div>
+                  <p class="flag-item__title">Spoofed Sender Domain</p>
+                  <p class="body flag-item__desc">
+                    "paypa<strong style="color: var(--tertiary)">1</strong>.com" vs "paypal.com" — a single character
+                    swap, easily
+                    missed.
+                  </p>
+                </div>
+              </li>
+              <li class="flag-item" id="flag-generic" role="listitem">
+                <span class="flag-item__icon" aria-hidden="true">🚩</span>
+                <div>
+                  <p class="flag-item__title">Generic Greeting</p>
+                  <p class="body flag-item__desc">
+                    Legitimate companies address you by name. "Valued
+                    Customer" signals a mass phishing campaign.
+                  </p>
+                </div>
+              </li>
+              <li class="flag-item" id="flag-link" role="listitem">
+                <span class="flag-item__icon" aria-hidden="true">🚩</span>
+                <div>
+                  <p class="flag-item__title">Suspicious Links</p>
+                  <p class="body flag-item__desc">
+                    Always hover to preview a link's true destination before
+                    clicking. Never click without checking.
+                  </p>
+                </div>
+              </li>
+              <li class="flag-item" id="flag-threat" role="listitem">
+                <span class="flag-item__icon" aria-hidden="true">🚩</span>
+                <div>
+                  <p class="flag-item__title">Threats &amp; Fear</p>
+                  <p class="body flag-item__desc">
+                    Threatening account suspension, legal action, or financial
+                    loss is a classic social engineering tactic.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECURITY TIPS ===================== -->
+    <section class="section tips" id="tips" aria-labelledby="tips-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="label section__label">05 — Security Tips</p>
+          <h2 class="h1" id="tips-heading">
+            Your Digital<br /><em>Armour</em>
+          </h2>
+          <p class="body section__desc">
+            Implement these practices to drastically reduce your attack
+            surface. Small habits compound into fortress-level security.
+          </p>
+        </div>
+
+        <div class="tips__grid">
+          <div class="tip-card reveal" id="tip-updates">
+            <div class="tip-card__header" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 4a12 12 0 110 24A12 12 0 0116 4z" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M16 10v6l4 2" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="tip-card__title">Update Regularly</h3>
+            <p class="body tip-card__body">
+              Enable automatic updates for OS, browsers, and apps. Patches
+              close known vulnerabilities that attackers actively exploit.
+            </p>
+            <span class="label tip-card__priority tip-card__priority--critical">Critical</span>
+          </div>
+
+          <div class="tip-card reveal" id="tip-vpn">
+            <div class="tip-card__header" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 4l10 5v8c0 7-5 11-10 13C11 28 6 24 6 17V9l10-5z" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M12 16l3 3 6-6" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="tip-card__title">Use a VPN</h3>
+            <p class="body tip-card__body">
+              Encrypt your internet connection on public Wi-Fi. A VPN hides
+              your traffic from eavesdroppers and masks your IP address.
+            </p>
+            <span class="label tip-card__priority tip-card__priority--high">High</span>
+          </div>
+
+          <div class="tip-card reveal" id="tip-backup">
+            <div class="tip-card__header" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="10" width="20" height="14" rx="2" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M11 8V6h10v2" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M16 14v4M14 16h4" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="tip-card__title">Backup Your Data</h3>
+            <p class="body tip-card__body">
+              Follow the 3-2-1 rule: 3 copies, 2 different media, 1 offsite.
+              If ransomware hits, backups are your ultimate recovery plan.
+            </p>
+            <span class="label tip-card__priority tip-card__priority--critical">Critical</span>
+          </div>
+
+          <div class="tip-card reveal" id="tip-firewall">
+            <div class="tip-card__header" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 8h20v16H6z" stroke="#DC0000" stroke-width="1.5" stroke-linejoin="round" />
+                <path d="M6 12h20M6 16h20M10 8v16M16 8v16M22 8v16" stroke="#DC0000" stroke-width="1.5" />
+              </svg>
+            </div>
+            <h3 class="tip-card__title">Enable Firewall</h3>
+            <p class="body tip-card__body">
+              Your OS firewall blocks unauthorized network connections. Keep
+              it enabled and configure it to deny all inbound by default.
+            </p>
+            <span class="label tip-card__priority tip-card__priority--high">High</span>
+          </div>
+
+          <div class="tip-card reveal" id="tip-mfa">
+            <div class="tip-card__header" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="14" width="16" height="12" rx="2" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M11 14v-3a5 5 0 0110 0v3" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="16" cy="20" r="2" fill="#DC0000" />
+              </svg>
+            </div>
+            <h3 class="tip-card__title">Multi-Factor Auth</h3>
+            <p class="body tip-card__body">
+              Add a second verification layer to every important account. Even
+              if your password is stolen, attackers can't get in without the
+              second factor.
+            </p>
+            <span class="label tip-card__priority tip-card__priority--critical">Critical</span>
+          </div>
+
+          <div class="tip-card reveal" id="tip-browser">
+            <div class="tip-card__header" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="6" width="24" height="20" rx="2" stroke="#DC0000" stroke-width="1.5" />
+                <path d="M4 11h24" stroke="#DC0000" stroke-width="1.5" />
+                <circle cx="8" cy="8.5" r="1" fill="#DC0000" />
+                <circle cx="12" cy="8.5" r="1" fill="#DC0000" />
+                <path d="M10 17l3 3 6-6" stroke="#DC0000" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="tip-card__title">Secure Browsing</h3>
+            <p class="body tip-card__body">
+              Use HTTPS-only sites, keep an ad blocker active, disable
+              unnecessary browser extensions, and clear cookies regularly.
+            </p>
+            <span class="label tip-card__priority tip-card__priority--moderate">Moderate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESOURCES ===================== -->
+    <section class="section resources" id="resources" aria-labelledby="resources-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="label section__label">06 — Resources</p>
+          <h2 class="h1" id="resources-heading">
+            Go Further.<br /><em>Stay Safe.</em>
+          </h2>
+          <p class="body section__desc">
+            Hand-curated, trusted resources from government agencies,
+            non-profits, and security leaders — all free.
+          </p>
+        </div>
+
+        <div class="resources__grid">
+          <a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer" class="resource-card reveal"
+            id="resource-cisa" aria-label="Visit CISA — Cybersecurity & Infrastructure Security Agency">
+            <p class="label resource-card__category">Government</p>
+            <h3 class="resource-card__title">CISA</h3>
+            <p class="body resource-card__desc">
+              Cybersecurity & Infrastructure Security Agency. Official alerts,
+              advisories, and free training.
+            </p>
+            <span class="resource-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://haveibeenpwned.com" target="_blank" rel="noopener noreferrer" class="resource-card reveal"
+            id="resource-hibp" aria-label="Visit Have I Been Pwned — check if your email was breached">
+            <p class="label resource-card__category">Breach Check</p>
+            <h3 class="resource-card__title">Have I Been Pwned</h3>
+            <p class="body resource-card__desc">
+              Check if your email or phone number appears in known data
+              breaches. Instant, free, no account needed.
+            </p>
+            <span class="resource-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://www.ncsc.gov.uk" target="_blank" rel="noopener noreferrer" class="resource-card reveal"
+            id="resource-ncsc" aria-label="Visit NCSC — National Cyber Security Centre">
+            <p class="label resource-card__category">Government</p>
+            <h3 class="resource-card__title">NCSC</h3>
+            <p class="body resource-card__desc">
+              National Cyber Security Centre (UK). Practical guidance for
+              individuals and organisations.
+            </p>
+            <span class="resource-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://bitwarden.com" target="_blank" rel="noopener noreferrer" class="resource-card reveal"
+            id="resource-bitwarden" aria-label="Visit Bitwarden — free open-source password manager">
+            <p class="label resource-card__category">Tool</p>
+            <h3 class="resource-card__title">Bitwarden</h3>
+            <p class="body resource-card__desc">
+              Free, open-source password manager. Generate, store, and
+              autofill strong unique passwords securely.
+            </p>
+            <span class="resource-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://www.sans.org/security-awareness-training" target="_blank" rel="noopener noreferrer"
+            class="resource-card reveal" id="resource-sans" aria-label="Visit SANS Security Awareness Training">
+            <p class="label resource-card__category">Training</p>
+            <h3 class="resource-card__title">SANS Awareness</h3>
+            <p class="body resource-card__desc">
+              World-class security awareness training and resources from one
+              of the top cybersecurity institutes.
+            </p>
+            <span class="resource-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="https://owasp.org" target="_blank" rel="noopener noreferrer" class="resource-card reveal"
+            id="resource-owasp" aria-label="Visit OWASP — Open Web Application Security Project">
+            <p class="label resource-card__category">Research</p>
+            <h3 class="resource-card__title">OWASP</h3>
+            <p class="body resource-card__desc">
+              Open Web Application Security Project. Free guides, tools, and
+              the famous OWASP Top 10 vulnerabilities list.
+            </p>
+            <span class="resource-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner reveal" role="complementary" aria-label="Newsletter signup">
+          <div class="cta-banner__inner">
+            <div>
+              <p class="label cta-banner__label">Stay Informed</p>
+              <h3 class="cta-banner__title">
+                Get Weekly Threat Intelligence
+              </h3>
+              <p class="body cta-banner__desc">
+                No spam. No noise. Just curated cybersecurity updates every
+                Monday morning.
+              </p>
+            </div>
+            <form class="cta-banner__form" action="#" method="post" aria-label="Email subscription form"
+              onsubmit="handleSubscribe(event)">
+              <div class="cta-banner__input-wrap">
+                <input type="email" id="subscribe-email" name="email" class="cta-banner__input"
+                  placeholder="your@email.com" autocomplete="email" required aria-label="Email address"
+                  aria-required="true" />
+                <button type="submit" class="btn btn--primary" id="subscribe-btn">
+                  Subscribe
+                </button>
+              </div>
+              <p class="label cta-banner__privacy">
+                No spam. Unsubscribe anytime.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-icon" aria-hidden="true">⬡</span>
+        <span class="nav__logo-text">CyberShield</span>
+        <p class="body footer__tagline">
+          Educating the digital generation.<br />Security is everyone's
+          responsibility.
+        </p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="#attacks" class="footer__link">Threats</a></li>
+          <li><a href="#passwords" class="footer__link">Passwords</a></li>
+          <li><a href="#phishing" class="footer__link">Phishing</a></li>
+          <li><a href="#tips" class="footer__link">Tips</a></li>
+          <li><a href="#resources" class="footer__link">Resources</a></li>
+        </ul>
+      </nav>
+      <p class="label footer__copy" aria-label="Copyright 2025 CyberShield. Educational purposes only.">
+        © 2025 CyberShield — Educational Purposes Only
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
