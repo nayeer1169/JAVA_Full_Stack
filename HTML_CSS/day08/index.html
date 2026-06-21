@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Configure and customize your high-performance BMW M2. Choose paint finishes, M performance packages, and preview technical specifications in real-time.">
+  <title>BMW M2 Customizer — Design Your Ultimate Driving Machine</title>
+
+  <!-- Google Fonts for Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Logo Favicon Placeholder -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230b0f19' stroke='%2338bdf8' stroke-width='2'/%3E%3Cpath d='M16 6 L16 26 M6 16 L26 16' stroke='%23818cf8' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+
+<body>
+
+  <!-- ========== HEADER & NAVIGATION ========== -->
+  <header class="header">
+    <nav class="nav" id="main-nav" aria-label="Primary Navigation">
+      <a href="#" class="nav__brand" id="nav-brand-link">
+        M<span class="nav__brand-accent">2</span> CUSTOMIZER
+      </a>
+      <ul class="nav__links" id="nav-menu">
+        <li class="nav__item"><a href="#hero" class="nav__link" id="nav-link-home">Home</a></li>
+        <li class="nav__item"><a href="#customizer" class="nav__link" id="nav-link-builder">Customize</a></li>
+        <li class="nav__item"><a href="#specs" class="nav__link" id="nav-link-performance">Performance</a></li>
+        <li class="nav__item"><a href="#interior" class="nav__link" id="nav-link-cockpit">Cockpit</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="#customizer" class="btn-primary btn-nav-cta" id="btn-build-now">BUILD YOURS</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ========== MOBILE NAVIGATION OVERLAY ========== -->
+  <div class="mobile-nav" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <a href="#hero" class="mobile-nav__link" id="mob-link-home">Home</a>
+    <a href="#customizer" class="mobile-nav__link" id="mob-link-builder">Customize</a>
+    <a href="#specs" class="mobile-nav__link" id="mob-link-performance">Performance</a>
+    <a href="#interior" class="mobile-nav__link" id="mob-link-cockpit">Cockpit</a>
+    <a href="#customizer" class="btn-primary" style="margin-top: 1.5rem; display: block; text-align: center;">BUILD YOURS</a>
+  </div>
+
+  <main>
+    <!-- ========== HERO SECTION WITH LOOPING VIDEO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__video-wrapper">
+        <video class="hero__video" autoplay muted loop playsinline role="none" aria-hidden="true">
+          <source src="assets/hero_video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero__overlay"></div>
+      
+      <div class="hero__content">
+        <div class="badge" id="hero-badge">Day 08 Showroom Project</div>
+        <h1 class="hero__title">
+          Unleash the <span class="text-glow">Stealth Beast.</span>
+        </h1>
+        <p class="hero__subtitle">
+          Experience extreme dynamics, high-revving performance, and raw precision styling. Configure your bespoke BMW M2 Coupe now.
+        </p>
+        <div class="hero__cta-group">
+          <a href="#customizer" class="btn-primary" id="hero-cta-build">CONFIGURE NOW</a>
+          <a href="#specs" class="btn-secondary" id="hero-cta-specs">EXPLORE POWER</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span>SCROLL DOWN</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ========== INTERACTIVE CUSTOMIZER SECTION ========== -->
+    <section class="section customizer-container" id="customizer">
+      <div class="section-header">
+        <span class="section-label">Interactive Configurator</span>
+        <h2 class="section-title">Design Your M2 Coupe</h2>
+      </div>
+
+      <div class="customizer">
+        <!-- Live Vehicle Preview -->
+        <div class="customizer__preview">
+          <div class="preview-glow" id="preview-glow-bg"></div>
+          <img id="vehicle-preview" src="assets/bmw_blue.png" alt="BMW M2 Coupe Yas Marina Blue Preview" class="customizer__image active">
+          
+          <div class="preview-badge">
+            <span class="preview-badge__status" id="active-finish-label">Paint Finish: Yas Marina Blue</span>
+          </div>
+        </div>
+
+        <!-- Customizer Configuration Panel -->
+        <div class="customizer__options glass-card">
+          <h3 class="config-title">Vehicle Configuration</h3>
+          
+          <!-- Paint Finish Selectors -->
+          <div class="config-group">
+            <h4 class="config-label">1. Paint Finish</h4>
+            <div class="swatches">
+              <button class="swatch swatch--blue active" id="swatch-blue" aria-label="Select Yas Marina Blue Paint" data-color="blue" data-finish="Yas Marina Blue">
+                <span class="swatch__color"></span>
+              </button>
+              <button class="swatch swatch--red" id="swatch-red" aria-label="Select Toronto Red Paint" data-color="red" data-finish="Toronto Red">
+                <span class="swatch__color"></span>
+              </button>
+              <button class="swatch swatch--black" id="swatch-black" aria-label="Select Sapphire Black Paint" data-color="black" data-finish="Sapphire Black">
+                <span class="swatch__color"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Wheel Options -->
+          <div class="config-group">
+            <h4 class="config-label">2. Wheel Design</h4>
+            <div class="wheel-options">
+              <button class="btn-option active" id="wheel-standard" data-wheel="standard">
+                19"/20" M Double-spoke Style 930 M Black
+              </button>
+              <button class="btn-option" id="wheel-sport" data-wheel="sport">
+                19"/20" M Light Alloy Star-spoke Bi-Color
+              </button>
+            </div>
+          </div>
+
+          <!-- Optional Carbon Package Selector -->
+          <div class="config-group">
+            <h4 class="config-label">3. Performance Packages</h4>
+            <div class="package-options">
+              <button class="btn-option" id="pkg-track" data-package="track">
+                M Race Track Package (+40 HP Tuning &amp; Speed Unlock)
+              </button>
+              <button class="btn-option" id="pkg-carbon" data-package="carbon">
+                M Carbon Fiber Aero &amp; Roof Package
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PERFORMANCE SPECS SECTION ========== -->
+    <section class="section specs-container" id="specs">
+      <div class="specs-grid-wrapper">
+        <div class="specs-intro">
+          <span class="section-label">Engineering Metrics</span>
+          <h2 class="section-title">The Math Behind the Beast</h2>
+          <p class="section-text">
+            Engineered to bridge track limits and street legality. The TwinPower Turbo inline 6-cylinder engine reacts instantaneously to custom tunings.
+          </p>
+        </div>
+
+        <div class="specs-grid">
+          <!-- Power Metric -->
+          <div class="glass-card spec-item-card">
+            <div class="spec-value-container">
+              <span class="spec-value" id="spec-power">460</span>
+              <span class="spec-unit">HP</span>
+            </div>
+            <p class="spec-name">Maximum Engine Output</p>
+            <div class="spec-bar-container">
+              <div class="spec-bar-fill" id="bar-power" style="--spec-target: 76%"></div>
+            </div>
+          </div>
+
+          <!-- Acceleration Metric -->
+          <div class="glass-card spec-item-card">
+            <div class="spec-value-container">
+              <span class="spec-value" id="spec-accel">3.9</span>
+              <span class="spec-unit">s</span>
+            </div>
+            <p class="spec-name">0 - 60 MPH Acceleration</p>
+            <div class="spec-bar-container">
+              <div class="spec-bar-fill" id="bar-accel" style="--spec-target: 88%"></div>
+            </div>
+          </div>
+
+          <!-- Top Speed Metric -->
+          <div class="glass-card spec-item-card">
+            <div class="spec-value-container">
+              <span class="spec-value" id="spec-speed">177</span>
+              <span class="spec-unit">MPH</span>
+            </div>
+            <p class="spec-name">Top Speed (Electronic Limit)</p>
+            <div class="spec-bar-container">
+              <div class="spec-bar-fill" id="bar-speed" style="--spec-target: 71%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== INTERIOR GALLERY SECTION ========== -->
+    <section class="section interior-container" id="interior">
+      <div class="interior-showcase">
+        <div class="interior-image-wrap">
+          <img src="assets/bmw_interior.png" alt="BMW M2 Cockpit Carbon Fiber Interior Grid" id="interior-preview-img" class="interior-img">
+          <div class="glass-card interior-details">
+            <span class="section-label">M Dynamic Cockpit</span>
+            <h3 class="interior-title">Focused on the Apex</h3>
+            <p class="interior-text">
+              Equipped with BMW Curved Display featuring M-specific graphics, optional M Carbon bucket seats, and carbon interior trim accents mapping the perfect race setup.
+            </p>
+            <div class="interior-specs">
+              <div class="interior-spec-item">
+                <span class="spec-key">Display Size</span>
+                <span class="spec-val">12.3" + 14.9" Dual Panels</span>
+              </div>
+              <div class="interior-spec-item">
+                <span class="spec-key">Trims</span>
+                <span class="spec-val">Aerospace Carbon Fiber</span>
+              </div>
+              <div class="interior-spec-item">
+                <span class="spec-key">Haptic Feedback</span>
+                <span class="spec-val">M Multifunction Steer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER SECTION ========== -->
+  <footer class="footer" id="main-footer">
+    <div class="footer__content">
+      <div class="footer__brand-info">
+        <p class="footer__brand-title">M2 CUSTOMIZER</p>
+        <p class="footer__brand-slogan">Engineering precision, tailored by you. Designed as a study project exploring advanced responsive design &amp; layout CSS rules.</p>
+      </div>
+      <div class="footer__links-col">
+        <p class="footer__col-heading">Configurator</p>
+        <ul class="footer__links-list">
+          <li><a href="#customizer" class="footer__link" id="foot-link-color">Color Finishes</a></li>
+          <li><a href="#customizer" class="footer__link" id="foot-link-wheels">Wheels Grid</a></li>
+          <li><a href="#specs" class="footer__link" id="foot-link-power">M Engine Power</a></li>
+        </ul>
+      </div>
+      <div class="footer__links-col">
+        <p class="footer__col-heading">Support</p>
+        <ul class="footer__links-list">
+          <li><a href="#" class="footer__link" id="foot-link-dealer">Find Dealer</a></li>
+          <li><a href="#" class="footer__link" id="foot-link-brochure">Download Brochure</a></li>
+          <li><a href="#" class="footer__link" id="foot-link-contact">Contact BMW</a></li>
+        </ul>
+      </div>
+      <div class="footer__links-col">
+        <p class="footer__col-heading">Class Credits</p>
+        <p class="footer__credits-text">
+          Java Full Stack Course / CSS Lab Day 08. Inspired by premium configurations. Created at <a href="https://www.tapacademy.in" target="_blank" class="footer__external-link">Tap Academy</a>.
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2026 BMW Showroom. All trademark assets are owned by their respective rights holders.</p>
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link" aria-label="BMW Twitter Link" id="social-twitter">Twitter</a>
+        <a href="#" class="footer__social-link" aria-label="BMW Instagram Link" id="social-instagram">Instagram</a>
+        <a href="#" class="footer__social-link" aria-label="BMW YouTube Link" id="social-youtube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
